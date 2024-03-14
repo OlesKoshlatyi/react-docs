@@ -1,21 +1,26 @@
-import React from "react";
-import "./styles.css";
+import { useState } from 'react';
 
-const Square = () => {
+import './styles.css';
+
+function Square() {
   const [value, setValue] = useState(null);
 
   function handleClick() {
-    setValue(x);
+    setValue('x');
   }
 
   return (
-    <button className="square" onClick={handleClick}>
+    <button
+      type="button"
+      className="square"
+      onClick={handleClick}
+    >
       {value}
     </button>
   );
-};
+}
 
-const App = () => {
+function App() {
   return (
     <>
       <div className="board-row">
@@ -35,6 +40,6 @@ const App = () => {
       </div>
     </>
   );
-};
+}
 
 export default App;
